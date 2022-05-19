@@ -38,10 +38,12 @@ def _compute_groups(img):
 
 
 def _compute_box(group):
-    left = min(x for x, y in group)
-    upper = min(y for x, y in group)
-    right = max(x for x, y in group)
-    lower = max(y for x, y in group)
+    xs = set(x for x, y in group)
+    ys = set(y for x, y in group)
+    left = min(xs)
+    upper = min(ys)
+    right = max(xs)
+    lower = max(ys)
     return (left, upper, right, lower)
 
 

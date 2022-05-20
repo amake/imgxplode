@@ -7,6 +7,8 @@ by transparent pixels:
 
 ![](./test.png)
 
+(One of the regions is white! Sorry!)
+
 This tool would output three images corresponding to the three regions.
 
 # Usage

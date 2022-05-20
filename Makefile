@@ -7,11 +7,11 @@ all: test
 .PHONY: test
 test: ## Run tests
 test: clean | $(env)
-	$(env)/bin/python imgxplode.py test.png
+	$(env)/bin/python3 imgxplode.py test.png
 	@(( $$(find . -name 'test-*.png' | wc -l) == 3 )) && echo ok
 
 $(env):
-	virtualenv $(@)
+	python3 -m venv $(@)
 	$(@)/bin/pip install pillow
 
 .PHONY: clean
